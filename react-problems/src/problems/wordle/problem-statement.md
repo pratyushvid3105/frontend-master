@@ -103,11 +103,3 @@ The complete HTML output of a completed game might look like this after first gu
   </div>
 </div>
 ```
-
-Your component has already been rendered to the DOM inside of a `#root` div directly in the body with the CSS imported.
-
-## Hints
-
-**Hint 1** ▼
-
-**Hint 2** ▼
