@@ -2,9 +2,7 @@
 
 **Category:** React Components
 
-## 📋 Prompt Code
-
-This question has pre-written CSS code, accessible at the top of this pane.
+This question has pre-written CSS code, accessible below.
 
 You're given a CSS file for a clone of the popular game **Wordle**, and you need to implement the component using React.
 
@@ -102,4 +100,48 @@ The complete HTML output of a completed game might look like this after first gu
     <div class="tile"></div>
   </div>
 </div>
+```
+
+## CSS Code
+
+```css
+body {
+  background-color: white;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+
+.line {
+  display: flex;
+  gap: 10px;
+  margin: auto;
+}
+
+.tile {
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+.correct {
+  background-color: lightgreen;
+}
+
+.close {
+  background-color: yellow;
+}
+
+.incorrect {
+  background-color: lightgrey;
+}
 ```

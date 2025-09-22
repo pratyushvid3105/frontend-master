@@ -2,9 +2,7 @@
 
 **Category:** React Components
 
-## 📋 Prompt Code
-
-This question has pre-written CSS code, accessible at the top of this pane.
+This question has pre-written CSS code, accessible below.
 
 You're given a CSS file for a tip calculator, and you need to implement the component using React.
 
@@ -21,14 +19,6 @@ The second paragraph displays the tip per person, rounded to two decimal places.
 If any of the values needed to calculate the total tip or the tip per person are empty strings, then the resulting numbers should be replaced by the "-" character without a "$". For example, the second paragraph might read "Tip Per Person: -" in this case. For simplicity, you do not need to handle the case where a user types in 0 or a negative number for any of the inputs.
 
 Your component has already been rendered to the DOM inside of a **#root** div directly in the body with the CSS imported.
-
-## Hints
-
-**Hint 1** ▼
-
-**Hint 2** ▼
-
----
 
 ## CSS Code
 
