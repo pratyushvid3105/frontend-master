@@ -1,47 +1,41 @@
-function isPrimitive(value) {
-  return value !== Object(value);
-}
-
-function isArray(value) {
+function flattenArray(value) {
   let flatArray = [];
   value.forEach((el) => {
-    if (Array.isArray(el)) {
-      flatArray.push(...flatten(el));
-    } else if (isPrimitive(el)) {
+    if (el !== Object(el)) {
       flatArray.push(el);
-    } else if (Object.prototype.toString.call(el) === "[object Object]") {
-      flatArray.push(isPlainObject(el));
+    } else if (Array.isArray(el)) {
+      flatArray.push(...flattenArray(el));
+    } else {
+      flatArray.push(flattenPlainObject(el));
     }
   });
   return flatArray;
 }
 
-function isPlainObject(value) {
+function flattenPlainObject(value) {
   let flatObject = {};
-  Object.keys(value).forEach((key) => {
-    if (isPrimitive(value[key])) {
-      flatObject[key] = value[key];
-    } else if (Array.isArray(value[key])) {
-      flatObject[key] = isArray(value[key]);
-    } else if (
-      Object.prototype.toString.call(value[key]) === "[object Object]"
-    ) {
-      flatObject = { ...flatObject, ...isPlainObject(value[key]) };
+  for (const [objKey, objectValue] of Object.entries(value)) {
+    if (objectValue !== Object(objectValue)) {
+      flatObject[objKey] = objectValue;
+    } else if (Array.isArray(objectValue)) {
+      flatObject[objKey] = flattenArray(objectValue);
+    } else {
+      const flatChildObject = flattenPlainObject(objectValue);
+      for (const [ck, cv] of Object.entries(flatChildObject)) {
+        flatObject[ck] = cv;
+      }
     }
-  });
+  }
   return flatObject;
 }
 
 function flatten(value) {
-  const type = typeof value;
-  if (isPrimitive(value)) {
+  if (value !== Object(value)) {
     return value;
-  } else if (type === "object") {
-    if (Array.isArray(value)) {
-      return isArray(value);
-    } else if (Object.prototype.toString.call(value) === "[object Object]") {
-      return isPlainObject(value);
-    }
+  } else if (Array.isArray(value)) {
+    return flattenArray(value);
+  } else {
+    return flattenPlainObject(value);
   }
 }
 
