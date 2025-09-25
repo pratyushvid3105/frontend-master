@@ -63,7 +63,7 @@ p {
 } */
 
 /* Question List */
-body {
+/* body {
   background-color: #f6f9fc;
 }
 
@@ -132,4 +132,72 @@ h3:hover {
 .unattempted {
   background-color: transparent;
   border: 1px solid #6772e54d;
+} */
+
+/* Quiz CSS */
+body {
+  background-color: #f6f9fc;
+}
+
+h1 {
+  text-align: center;
+}
+
+button,
+input[type="button"] {
+  cursor: pointer;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  background-color: #0220ac;
+  color: white;
+  transition: 0.5s;
+  position: absolute;
+}
+
+button:first-of-type,
+input[type="button"]:first-of-type {
+  left: 16px;
+}
+
+button:last-of-type,
+input[type="button"]:last-of-type {
+  right: 16px;
+}
+
+button:disabled,
+input[type="button"]:disabled {
+  background-color: grey;
+}
+
+.answer {
+  cursor: pointer;
+  padding: 5px;
+  margin: 0;
+  border: 2px solid transparent; /* To prevent borders from moving content */
+}
+
+.answer:before {
+  content: "";
+  display: inline-block;
+  width: 0.5em;
+  height: 0.5em;
+  padding: 1px;
+  border: 1px solid black;
+  border-radius: 50%;
+  margin-right: 5px;
+  padding: 2px;
+}
+
+.answer.correct:before,
+.answer.incorrect:before {
+  background: black content-box;
+}
+
+.correct {
+  border: 2px solid green;
+}
+
+.incorrect {
+  border: 2px solid red;
 }
