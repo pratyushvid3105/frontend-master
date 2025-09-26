@@ -1,4 +1,5 @@
 import "./App.css";
+import Memory from "./problems/memory/Memory";
 import QuestionList from "./problems/question-list/QuestionList";
 import Quiz from "./problems/quiz/Quiz";
 import TipCalculator from "./problems/tip-calculator/TipCalculator";
@@ -10,7 +11,8 @@ function App() {
       {/* <Wordle /> */}
       {/* <TipCalculator /> */}
       {/* <QuestionList /> */}
-      <Quiz />
+      {/* <Quiz /> */}
+      <Memory />
     </>
   );
 }
