@@ -51,12 +51,6 @@ After the game completes, that HTML might change to this:
 
 Your component has already been rendered to the DOM inside of a **#root** div directly in the body with the CSS imported.
 
-## Hints
-
-**Hint 1** ▼
-
----
-
 ## CSS Code
 
 ```css
