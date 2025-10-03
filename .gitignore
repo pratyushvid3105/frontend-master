@@ -1,5 +1,4 @@
 .DS_Store
-/* complete this file*/
 node_modules
 dist
 build
