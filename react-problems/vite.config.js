@@ -11,8 +11,6 @@ export default defineConfig({
         target: "https://api.frontendexpert.io",
         changeOrigin: true,
         secure: true,
-        // 🔴 remove rewrite — we want to keep /api in the path
-        // rewrite: (path) => path.replace(/^\/api/, ''),  <-- delete this line
       },
     },
   },
