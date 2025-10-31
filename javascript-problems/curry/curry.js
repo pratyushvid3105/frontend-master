@@ -3,12 +3,12 @@ function curry(callback) {
     if (args.length > 0) {
       return function (...otherArgs) {
         if (otherArgs.length === 0) {
-          return callback(...args);
+          return callback.apply(this, args);
         }
-        return curriedFunc(...args, ...otherArgs);
+        return curriedFunc.apply(this, args.concat(otherArgs));
       };
     }
-    return callback();
+    return callback.apply(this);
   }
   return curriedFunc;
 }
