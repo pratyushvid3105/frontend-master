@@ -1,4 +1,5 @@
 import "./App.css";
+import ConnectFour from "./problems/connect-four/ConnectFour";
 import CryptoPrices from "./problems/crypto-prices/CryptoPrices";
 import Memory from "./problems/memory/Memory";
 import PhoneInput from "./problems/phone-input/PhoneInput";
@@ -10,13 +11,14 @@ import Wordle from "./problems/wordle/Wordle";
 function App() {
   return (
     <>
-      {/* <Wordle /> */}
-      {/* <TipCalculator /> */}
-      {/* <QuestionList /> */}
-      {/* <Quiz /> */}
-      {/* <Memory /> */}
-      {/* <CryptoPrices /> */}
+      {/* <Wordle />
+      <TipCalculator />
+      <QuestionList />
+      <Quiz />
+      <Memory />
+      <CryptoPrices />
       <PhoneInput />
+      <ConnectFour /> */}
     </>
   );
 }
